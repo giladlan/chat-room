@@ -15,5 +15,6 @@ class ServerSocket:
             self._socket = socket(AF_INET, SOCK_STREAM)
             self._socket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
             self._socket.bind((self.bind_addr, self.bind_port))
+            return self._socket
 
 

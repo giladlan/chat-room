@@ -12,4 +12,8 @@ class ClientSocket:
 
     @property
     def connection(self):
-        return self._socket
+        if self._socket:
+            return self._socket
+        else:
+            self.connect()
+            return self._socket
